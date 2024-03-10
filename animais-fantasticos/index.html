@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
     <header class="menu">
@@ -25,7 +28,7 @@
     </header>
     <main class="grid-section animais" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
-      <ul class="animais-lista">
+      <ul class="animais-lista js-tabmenu">
         <li><img src="./img/imagem1.jpg" alt="Foto de uma Raposa" /></li>
         <li><img src="./img/imagem2.jpg" alt="Foto de um Esquilo" /></li>
         <li><img src="./img/imagem3.jpg" alt="Foto de um Urso" /></li>
@@ -33,7 +36,7 @@
         <li><img src="./img/imagem5.jpg" alt="Foto de um Macaco" /></li>
         <li><img src="./img/imagem6.jpg" alt="Foto de um Leão" /></li>
       </ul>
-      <div class="animais-descricao">
+      <div class="animais-descricao js-tabcontent">
         <section>
           <h2>Raposa</h2>
           <p>
@@ -204,5 +207,6 @@
     <footer class="copy">
       <p>Todos os direitos reservados.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
