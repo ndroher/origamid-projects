@@ -88,6 +88,7 @@ img {
   grid-column: 2;
 }
 
+/*NAVEGAÇÃO POR TABS */
 .animais-lista img {
   cursor: pointer;
 }
@@ -111,6 +112,7 @@ img {
     transform: translate3d(0, 0, 0);
   }
 }
+/* */
 
 .animais-lista::-webkit-scrollbar {
   width: 18px;
@@ -185,6 +187,54 @@ img {
   height: 10px;
   margin-right: 10px;
 }
+
+/* ACCORDION LIST */
+.js .js-accordion dd {
+  display: none;
+  animation: accordion-close 0.5s;
+}
+
+.js .js-accordion dt {
+  cursor: pointer;
+}
+
+.js .js-accordion dt::after {
+  content: "↴";
+  margin-left: 10px;
+}
+
+.js .js-accordion dt.ativo::after {
+  display: inline-block;
+  animation: accordion-arrow 0.5s forwards;
+}
+
+.js .js-accordion dd.ativo {
+  display: block;
+  animation: accordion-open 0.5s;
+}
+
+@keyframes accordion-open {
+  from {
+    opacity: 0;
+    /* transform: translate3d(0, -30px, 0); */
+    max-height: 0px;
+  }
+  to {
+    opacity: 1;
+    /* transform: translate3d(0, 0, 0); */
+    max-height: 200px;
+  }
+}
+
+@keyframes accordion-arrow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+/* */
 
 /* SEÇÃO CONTATO */
 .mapa {
