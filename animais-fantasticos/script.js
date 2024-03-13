@@ -27,6 +27,7 @@ const accordionDD = document.querySelectorAll(".js-accordion dd");
 
 if (accordionDD.length && accordionDT.length) {
   accordionDD[0].classList.add("ativo");
+  accordionDT[0].classList.add("ativo");
 
   function accordionList(dt) {
     dt.classList.toggle("ativo");
