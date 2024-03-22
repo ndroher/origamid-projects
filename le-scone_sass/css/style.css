@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=PT+Mono&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -50,6 +51,120 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  background-color: #edece4;
+  border: 10px solid #cbc6b9;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  body {
+    border: none;
+  }
+}
+
+p {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .container {
+    max-width: 760px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  margin-top: 60px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .home {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.home__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left {
+    gap: 50px;
+  }
+}
+.home__left .home__left__info p {
+  border-right: 2px solid #2a2426;
+  padding-right: 80px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left .home__left__info p {
+    padding-right: 40px;
+  }
+}
+.home__left .home__left__info p:first-child {
+  border-bottom: 2px solid #2a2426;
+  padding-bottom: 10px;
+}
+.home__left .home__left__info p:nth-child(2) {
+  padding-top: 10px;
+}
+.home__left .home__left__info p:last-child {
+  color: #988c77;
+  border-right: none;
+}
+.home__left .home__left__info .aberto {
+  display: inline-block;
+  background-color: #1ab912;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin-left: 20px;
+}
+.home__left .home-detalhe {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #2a2426;
+  font-size: 15rem;
+  letter-spacing: -6.5rem;
+  line-height: normal;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left .home-detalhe {
+    font-size: 10rem;
+    letter-spacing: -4.5rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .home__left .home-detalhe {
+    display: none;
+  }
+}
+
+.home__right img {
+  border: 10px solid #cbc6b9;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

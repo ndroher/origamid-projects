@@ -1,0 +1,26 @@
+body {
+  background-color: $primary-color;
+  @include border;
+  @include device(s) {
+    border: none;
+  }
+}
+
+p {
+  @include primary-text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $l-device;
+  @include device(m) {
+    max-width: $m-device;
+  }
+  @include device(s) {
+    max-width: $s-device;
+  }
+}

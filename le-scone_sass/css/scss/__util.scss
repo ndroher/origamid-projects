@@ -1,0 +1,38 @@
+//Variaveis
+$primary-color: #edece4;
+$secondary-color: #cbc6b9;
+$details-color: #988c77;
+$black-color: #2a2426;
+$green-color: #1ab912;
+
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+//Media Queries
+@mixin device($size) {
+  @if $size == l {
+    @media screen and (min-width: $l-device) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (min-width: $m-device) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (min-width: $s-device) and (max-width: #{$m-device - 1}) {
+      @content;
+    }
+  }
+}
+
+//Mixins
+@mixin border {
+  border: 10px solid $secondary-color;
+}
+
+@mixin primary-text {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
