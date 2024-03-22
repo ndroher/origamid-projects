@@ -1,0 +1,79 @@
+//Variaveis
+$primary-color: #edece4;
+$secondary-color: #cbc6b9;
+$details-color: #988c77;
+$black-color: #2a2426;
+$green-color: #1ab912;
+
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+//Media Queries
+@mixin device($size) {
+  @if $size == l {
+    @media screen and (min-width: $l-device) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (min-width: $m-device) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (min-width: $s-device) and (max-width: #{$m-device - 1}) {
+      @content;
+    }
+  }
+}
+
+//Mixins
+@mixin border {
+  border: 10px solid $secondary-color;
+}
+
+@mixin primary-text {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+@mixin secondary-text {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+@mixin title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  span {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: $black-color;
+    justify-self: center;
+    @include device(s) {
+      width: 100%;
+    }
+  }
+  h1 {
+    @include primary-text;
+    text-transform: uppercase;
+    width: 80px;
+  }
+}
+
+@mixin form-label {
+  width: 100%;
+  border: 2px solid $details-color;
+  background: transparent;
+  @include primary-text;
+  &:hover {
+    border: 2px solid $secondary-color;
+  }
+  &:focus {
+    border: 2px solid $secondary-color;
+    outline: none;
+  }
+}

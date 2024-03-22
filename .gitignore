@@ -1,1 +1,4 @@
 .vscode
+le-scone_sass/node_modules
+le-scone_sass/package-lock.json
+le-scone_sass/css/style.css.map

@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=PT+Mono&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #edece4;
+  border: 10px solid #cbc6b9;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  body {
+    border: none;
+  }
+}
+
+p,
+label {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .container {
+    max-width: 760px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  margin-top: 60px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .home {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.home__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left {
+    gap: 50px;
+  }
+}
+.home__left .home__left__info p {
+  border-right: 2px solid #2a2426;
+  padding-right: 80px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left .home__left__info p {
+    padding-right: 40px;
+  }
+}
+.home__left .home__left__info p:first-child {
+  border-bottom: 2px solid #2a2426;
+  padding-bottom: 10px;
+}
+.home__left .home__left__info p:nth-child(2) {
+  padding-top: 10px;
+}
+.home__left .home__left__info p:last-child {
+  color: #988c77;
+  border-right: none;
+}
+.home__left .home__left__info .aberto {
+  display: inline-block;
+  background-color: #1ab912;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin-left: 20px;
+}
+.home__left .home-detalhe {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #2a2426;
+  font-size: 15rem;
+  letter-spacing: -6.5rem;
+  line-height: normal;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .home__left .home-detalhe {
+    font-size: 10rem;
+    letter-spacing: -4.5rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .home__left .home-detalhe {
+    display: none;
+  }
+}
+
+.home__right img {
+  border: 10px solid #cbc6b9;
+  width: 100%;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 5fr 3.5fr 3.5fr;
+}
+.menu .menu__title .menu__title__div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu .menu__title .menu__title__div span {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #2a2426;
+  justify-self: center;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__title .menu__title__div span {
+    width: 100%;
+  }
+}
+.menu .menu__title .menu__title__div h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  width: 80px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__title {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+}
+.menu .menu__cardapio h1 {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.menu .menu__cardapio span {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #988c77;
+  position: absolute;
+  left: -4rem;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__cardapio span {
+    position: initial;
+    margin-right: 10px;
+  }
+}
+.menu .menu__cardapio li {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin: 10px 0;
+  position: relative;
+}
+.menu .menu__cardapio .menu__cardapio__principais {
+  margin-top: 60px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__cardapio {
+    grid-column: 1/3;
+  }
+}
+.menu .menu__imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__imagens {
+    grid-column: 3;
+    justify-content: flex-start;
+    gap: 200px;
+  }
+}
+.menu .menu__imagens img {
+  border-radius: 50%;
+  border: 10px solid #cbc6b9;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__imagens img {
+    width: 90%;
+  }
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+.contato .contato__title .contato__title__div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.contato .contato__title .contato__title__div span {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #2a2426;
+  justify-self: center;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__title .contato__title__div span {
+    width: 100%;
+  }
+}
+.contato .contato__title .contato__title__div h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  width: 80px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__title {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+}
+.contato .contato__main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.contato .contato__main div:nth-child(1), .contato .contato__main div:nth-child(4) {
+  grid-column: 1/-1;
+}
+.contato .contato__main div:nth-child(2) {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main div:nth-child(2) {
+    grid-column: 1/-1;
+  }
+}
+.contato .contato__main div:nth-child(3) {
+  grid-column: 3/4;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main div:nth-child(3) {
+    grid-column: 1/-1;
+  }
+}
+.contato .contato__main div label {
+  display: block;
+  width: 100%;
+}
+.contato .contato__main div input {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  height: 40px;
+}
+.contato .contato__main div input:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main div input:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main div textarea {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  resize: none;
+}
+.contato .contato__main div textarea:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main div textarea:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main .btn {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  color: #988c77;
+  text-transform: uppercase;
+  height: 40px;
+  box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+  transition: 0.3s;
+}
+.contato .contato__main .btn:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main .btn:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main .btn:hover {
+  box-shadow: 2px 2px 0 -2px #cbc6b9, 2px 2px 0 0 #988c77;
+  border: 2px solid #988c77;
+}
+.contato .contato__main .forms__info {
+  color: #988c77;
+  grid-column: 3/4;
+  text-align: end;
+  margin-left: -5ch;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .contato .contato__main .forms__info {
+    grid-column: 1/-1;
+    text-align: start;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main .forms__info {
+    grid-column: 1/-1;
+    text-align: start;
+    margin-left: 0;
+  }
+}
+.contato .contato__main .contato__mapa {
+  grid-column: 1/-1;
+  width: 100%;
+  border: 10px solid #cbc6b9;
+  margin-top: 40px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main {
+    grid-column: 1/-1;
+  }
+}
+
+.footer {
+  background-color: #2a2426;
+  display: flex;
+  padding: 20px;
+  margin-top: 120px;
+  box-shadow: 0 0 0 10px #2a2426;
+  justify-content: space-evenly;
+}
+.footer p {
+  color: #edece4;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

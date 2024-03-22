@@ -1,0 +1,61 @@
+.menu {
+  display: grid;
+  grid-template-columns: 5fr 3.5fr 3.5fr;
+  .menu__title {
+    .menu__title__div {
+      @include title;
+    }
+    @include device(s) {
+      grid-column: 1 / -1;
+      margin-bottom: 40px;
+    }
+  }
+  .menu__cardapio {
+    h1 {
+      @include secondary-text;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+    span {
+      @include secondary-text;
+      color: $details-color;
+      position: absolute;
+      left: -4rem;
+      @include device(s) {
+        position: initial;
+        margin-right: 10px;
+      }
+    }
+    li {
+      @include primary-text;
+      margin: 10px 0;
+      position: relative;
+    }
+    .menu__cardapio__principais {
+      margin-top: 60px;
+    }
+
+    @include device(s) {
+      grid-column: 1 / 3;
+    }
+  }
+  .menu__imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include device(s) {
+      grid-column: 3;
+      justify-content: flex-start;
+      gap: 200px;
+    }
+    gap: 80px;
+    img {
+      border-radius: 50%;
+      @include border;
+      @include device(s) {
+        width: 90%;
+      }
+    }
+  }
+}
