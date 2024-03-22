@@ -74,6 +74,9 @@ p {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -165,6 +168,99 @@ p {
 .home__right img {
   border: 10px solid #cbc6b9;
   width: 100%;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 5fr 3.5fr 3.5fr;
+}
+.menu .menu__title .menu__title__div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.menu .menu__title .menu__title__div span {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: #2a2426;
+  justify-self: center;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__title .menu__title__div span {
+    width: 100%;
+  }
+}
+.menu .menu__title h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__title {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+}
+.menu .menu__cardapio h1 {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.menu .menu__cardapio span {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #988c77;
+  position: absolute;
+  left: -4rem;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__cardapio span {
+    position: initial;
+    margin-right: 10px;
+  }
+}
+.menu .menu__cardapio li {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin: 10px 0;
+  position: relative;
+}
+.menu .menu__cardapio .menu__cardapio__principais {
+  margin-top: 60px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__cardapio {
+    grid-column: 1/3;
+  }
+}
+.menu .menu__imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__imagens {
+    grid-column: 3;
+    justify-content: flex-start;
+    gap: 200px;
+  }
+}
+.menu .menu__imagens img {
+  border-radius: 50%;
+  border: 10px solid #cbc6b9;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .menu .menu__imagens img {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
