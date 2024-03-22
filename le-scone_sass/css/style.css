@@ -63,7 +63,8 @@ body {
   }
 }
 
-p {
+p,
+label {
   font-family: "PT Mono", monospace;
   font-size: 1.1rem;
   line-height: 1.8rem;
@@ -177,11 +178,11 @@ p {
 .menu .menu__title .menu__title__div {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 .menu .menu__title .menu__title__div span {
   content: "";
-  width: 60%;
+  width: 50%;
   height: 2px;
   background-color: #2a2426;
   justify-self: center;
@@ -191,11 +192,12 @@ p {
     width: 100%;
   }
 }
-.menu .menu__title h1 {
+.menu .menu__title .menu__title__div h1 {
   font-family: "PT Mono", monospace;
   font-size: 1.1rem;
   line-height: 1.8rem;
   text-transform: uppercase;
+  width: 80px;
 }
 @media screen and (min-width: 480px) and (max-width: 759px) {
   .menu .menu__title {
@@ -260,6 +262,157 @@ p {
 @media screen and (min-width: 480px) and (max-width: 759px) {
   .menu .menu__imagens img {
     width: 90%;
+  }
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+.contato .contato__title .contato__title__div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.contato .contato__title .contato__title__div span {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #2a2426;
+  justify-self: center;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__title .contato__title__div span {
+    width: 100%;
+  }
+}
+.contato .contato__title .contato__title__div h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  width: 80px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__title {
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+  }
+}
+.contato .contato__main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.contato .contato__main div:nth-child(1), .contato .contato__main div:nth-child(4) {
+  grid-column: 1/-1;
+}
+.contato .contato__main div:nth-child(2) {
+  grid-column: 1/3;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main div:nth-child(2) {
+    grid-column: 1/-1;
+  }
+}
+.contato .contato__main div:nth-child(3) {
+  grid-column: 3/4;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main div:nth-child(3) {
+    grid-column: 1/-1;
+  }
+}
+.contato .contato__main div label {
+  display: block;
+  width: 100%;
+}
+.contato .contato__main div input {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  height: 40px;
+}
+.contato .contato__main div input:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main div input:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main div textarea {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  resize: none;
+}
+.contato .contato__main div textarea:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main div textarea:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main .btn {
+  width: 100%;
+  border: 2px solid #988c77;
+  background: transparent;
+  font-family: "PT Mono", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  color: #988c77;
+  text-transform: uppercase;
+  height: 40px;
+  box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+  transition: 0.3s;
+}
+.contato .contato__main .btn:hover {
+  border: 2px solid #cbc6b9;
+}
+.contato .contato__main .btn:focus {
+  border: 2px solid #cbc6b9;
+  outline: none;
+}
+.contato .contato__main .btn:hover {
+  box-shadow: 2px 2px 0 -2px #cbc6b9, 2px 2px 0 0 #988c77;
+  border: 2px solid #988c77;
+}
+.contato .contato__main .forms__info {
+  color: #988c77;
+  grid-column: 3/4;
+  text-align: end;
+  margin-left: -5ch;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .contato .contato__main .forms__info {
+    grid-column: 1/-1;
+    text-align: start;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main .forms__info {
+    grid-column: 1/-1;
+    text-align: start;
+    margin-left: 0;
+  }
+}
+.contato .contato__main .contato__mapa {
+  grid-column: 1/-1;
+  width: 100%;
+  border: 10px solid #cbc6b9;
+  margin-top: 40px;
+}
+@media screen and (min-width: 480px) and (max-width: 759px) {
+  .contato .contato__main {
+    grid-column: 1/-1;
   }
 }
 

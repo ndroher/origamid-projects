@@ -6,7 +6,8 @@ body {
   }
 }
 
-p {
+p,
+label {
   @include primary-text;
 }
 

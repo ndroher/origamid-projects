@@ -42,3 +42,38 @@ $s-device: 480px;
   font-size: 1.1rem;
   line-height: 1.8rem;
 }
+
+@mixin title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  span {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: $black-color;
+    justify-self: center;
+    @include device(s) {
+      width: 100%;
+    }
+  }
+  h1 {
+    @include primary-text;
+    text-transform: uppercase;
+    width: 80px;
+  }
+}
+
+@mixin form-label {
+  width: 100%;
+  border: 2px solid $details-color;
+  background: transparent;
+  @include primary-text;
+  &:hover {
+    border: 2px solid $secondary-color;
+  }
+  &:focus {
+    border: 2px solid $secondary-color;
+    outline: none;
+  }
+}

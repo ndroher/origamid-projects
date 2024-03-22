@@ -3,23 +3,7 @@
   grid-template-columns: 5fr 3.5fr 3.5fr;
   .menu__title {
     .menu__title__div {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      span {
-        content: "";
-        width: 60%;
-        height: 2px;
-        background-color: $black-color;
-        justify-self: center;
-        @include device(s) {
-          width: 100%;
-        }
-      }
-    }
-    h1 {
-      @include primary-text;
-      text-transform: uppercase;
+      @include title;
     }
     @include device(s) {
       grid-column: 1 / -1;
