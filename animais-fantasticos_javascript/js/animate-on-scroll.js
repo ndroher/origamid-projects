@@ -1,5 +1,5 @@
 export default function animateOnScroll() {
-  const sections = document.querySelectorAll(".js-scroll");
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
 
   if (sections.length) {
     function animaScroll() {

@@ -1,6 +1,6 @@
 export default function accordionList() {
-  const accordionDT = document.querySelectorAll(".js-accordion dt");
-  const accordionDD = document.querySelectorAll(".js-accordion dd");
+  const accordionDT = document.querySelectorAll('[data-anime="accordion"] dt');
+  const accordionDD = document.querySelectorAll('[data-anime="accordion"] dd');
 
   if (accordionDD.length && accordionDT.length) {
     accordionDD[0].classList.add("ativo");
