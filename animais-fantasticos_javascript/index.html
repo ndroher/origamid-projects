@@ -18,7 +18,7 @@
     </script>
   </head>
   <body>
-    <header class="menu js-menu">
+    <header class="menu" data-menu="scroll-suave">
       <ul>
         <li><a href="#animais">Animais</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -26,9 +26,9 @@
         <li><a href="https://github.com/ndroher">DEV →</a></li>
       </ul>
     </header>
-    <main class="grid-section animais js-scroll" id="animais">
+    <main class="grid-section animais" data-anime="scroll" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
-      <ul class="animais-lista js-tabmenu">
+      <ul class="animais-lista" data-tab="menu">
         <li><img src="./img/imagem1.jpg" alt="Foto de uma Raposa" /></li>
         <li><img src="./img/imagem2.jpg" alt="Foto de um Esquilo" /></li>
         <li><img src="./img/imagem3.jpg" alt="Foto de um Urso" /></li>
@@ -36,8 +36,8 @@
         <li><img src="./img/imagem5.jpg" alt="Foto de um Macaco" /></li>
         <li><img src="./img/imagem6.jpg" alt="Foto de um Leão" /></li>
       </ul>
-      <div class="animais-descricao js-tabcontent">
-        <section>
+      <div class="animais-descricao" data-tab="content">
+        <section data-anime="show-right">
           <h2>Raposa</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -58,7 +58,7 @@
             semelhantes às pupilas verticais dos felídeos.
           </p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Esquilo</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -79,7 +79,7 @@
             semelhantes às pupilas verticais dos felídeos.
           </p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Urso</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -100,7 +100,7 @@
             semelhantes às pupilas verticais dos felídeos.
           </p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Lobo</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -121,7 +121,7 @@
             semelhantes às pupilas verticais dos felídeos.
           </p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Macaco</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -142,7 +142,7 @@
             semelhantes às pupilas verticais dos felídeos.
           </p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Leão</h2>
           <p>
             As raposas são animais mamíferos e onívoros pertencentes à família
@@ -165,9 +165,9 @@
         </section>
       </div>
     </main>
-    <section class="grid-section faq js-scroll" id="faq">
+    <section class="grid-section faq" data-anime="scroll" id="faq">
       <h1 class="titulo">FAQ</h1>
-      <dl class="faq-lista js-accordion">
+      <dl class="faq-lista" data-anime="accordion">
         <dt>Qual a idade dos animais?</dt>
         <dd>
           As raposas são animais mamíferos e onívoros pertencentes à família
@@ -192,7 +192,7 @@
         </dd>
       </dl>
     </section>
-    <section class="grid-section contato js-scroll" id="contato">
+    <section class="grid-section contato" data-anime="scroll" id="contato">
       <h1 class="titulo">Contato</h1>
       <div class="mapa">
         <img src="./img/mapa.png" alt="Mapa do Endereço" />
@@ -207,6 +207,6 @@
     <footer class="copy">
       <p>Todos os direitos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
